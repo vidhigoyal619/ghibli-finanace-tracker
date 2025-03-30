@@ -9,9 +9,9 @@ This project features a **Navigation Bar** built using **React, TypeScript, Fram
 
 ## 📸 Screenshots
 ### Desktop View
-![Desktop Navbar](Screenshot%202025-03-30%20205623.png)
+![Desktop Navbar](Screenshot%202025-03-30%20205704.png)
 ### Mobile View
-![Mobile Navbar](Screenshot%202025-03-30%20205649.png)
+![Mobile Navbar](Screenshot%202025-03-30%20205741.png)
 
 ## 🛠 Tech Stack
 - **React** (UI framework)
