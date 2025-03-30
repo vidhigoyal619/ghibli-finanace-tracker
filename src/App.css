@@ -1,0 +1,165 @@
+/* 🌍 Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* 🔥 Root Container */
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* 🚀 Logo */
+.logo {
+  height: 5em;
+  padding: 1.2em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* 📌 Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+nav button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: #646cff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+nav button:hover {
+  background: #5158ff;
+}
+
+.export-button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #ff6b6b;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.export-button:hover {
+  background: #e44a4a;
+}
+
+/* 📌 Mobile Responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  nav ul li {
+    font-size: 0.9rem;
+  }
+
+  nav button {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .export-button {
+    width: 100%;
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 8px;
+  }
+
+  nav ul li {
+    font-size: 0.85rem;
+  }
+
+  nav button {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
+  .export-button {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+}
+
+/* 🎩 Wizard Character (Hidden on Mobile) */
+.hide-wizard {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .wizard-container {
+    display: none !important;
+  }
+}
