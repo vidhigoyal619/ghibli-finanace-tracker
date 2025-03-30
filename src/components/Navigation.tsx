@@ -49,17 +49,17 @@ const Navigation: React.FC = () => {
 
   return (
     <motion.div
-      className="mb-8 max-w-xl m-auto"
+      className="mb-8 max-w-xs m-auto"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
     >
       <nav className="bg-[#f4dcb8] p-3 flex justify-center rounded-lg shadow-md navigation">
-        <ul className="flex space-x-5">
+        <ul className="flex space-x-4">
           <li>
             <Link to="/" onClick={() => handleTabClick("dashboard")}>
               <motion.button
-                className={`px-6 py-2 rounded-lg font-medium transition-all ${
+                className={`px-3 py-2 rounded-lg font-medium transition-all ${
                   activeTab === "dashboard"
                     ? "bg-[#552302] text-[#f4dcb8] border-yellow-600 border-2"
                     : "bg-transparent text-[#552302] hover:bg-[#7a4f2a]/20"
@@ -74,7 +74,7 @@ const Navigation: React.FC = () => {
           <li>
             <Link to="/chart" onClick={() => handleTabClick("dashboard")}>
               <motion.button
-                className={`px-6 py-2 rounded-lg font-medium transition-all ${
+                className={`px-3 py-2 rounded-lg font-medium transition-all ${
                   activeTab === "dashboard"
                     ? "bg-[#552302] text-[#f4dcb8] border-yellow-600 border-2"
                     : "bg-transparent text-[#552302] hover:bg-[#7a4f2a]/20"
@@ -86,28 +86,18 @@ const Navigation: React.FC = () => {
               </motion.button>
             </Link>
           </li>
-          <li onClick={() => handleTabClick("dashboard")}>
-              <motion.button
-                className={`px-6 py-2 rounded-lg font-medium transition-all ${
-                  activeTab === "dashboard"
-                    ? "bg-[#552302] text-[#f4dcb8] border-yellow-600 border-2"
-                    : "bg-transparent text-[#552302] hover:bg-[#7a4f2a]/20"
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Save
-              </motion.button>
+          <li>
+            <motion.button
+              onClick={exportToCSV}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg font-medium transition-all bg-[#552302] text-[#f4dcb8] hover:bg-[#7a4f2a] w-full lg:w-auto"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+               Export
+            </motion.button>
           </li>
         </ul>
 
-        {/* Export CSV Button */}
-        {/* <button
-          onClick={exportToCSV}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#552302] text-[#f4dcb8] hover:bg-[#7a4f2a] transition-all"
-        >
-         Save
-        </button> */}
       </nav>
     </motion.div>
   );
